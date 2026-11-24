@@ -1,5 +1,3 @@
--- я тут оставлю коммент )
-
 --1. Выбрать все данные из таблицы customers
 SELECT * FROM customers;
 
@@ -16,14 +14,18 @@ SELECT
   shipped_date - order_id as diff_shipped_ordered_dt
 WHERE orders
 
--test
--test 2
--test 3
--test4
 4. Выбрать все уникальные города в которых "зарегистрированы" заказчики
+SELECT DISTINCT city
+FROM customers
 
--фывфвффыв
 5. Выбрать все уникальные сочетания городов и стран в которых "зарегистрированы" заказчики
-6. Посчитать кол-во заказчиков
-7. Посчитать кол-во уникальных стран в которых "зарегистрированы" заказчики
+SELECT DISTINCT city, country
+FROM customers
 
+6. Посчитать кол-во заказчиков
+SELECT  COUNT(*)
+FROM customers
+
+7. Посчитать кол-во уникальных стран в которых "зарегистрированы" заказчики
+SELECT  COUNT(DISTINCT country)
+FROM customers
